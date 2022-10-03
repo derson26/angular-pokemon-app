@@ -9,6 +9,7 @@ import { ContentsComponent } from './components/contents/contents.component';
 import { MaterialModule } from './modules/material/material.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TextTransformDirective } from './directives/text-transform.directive';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FooterComponent,
     ContentsComponent,
     PageNotFoundComponent,
+    TextTransformDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, MaterialModule, FlexLayoutModule],
   providers: [],
