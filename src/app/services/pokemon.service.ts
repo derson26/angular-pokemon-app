@@ -7,12 +7,13 @@ import { catchError, throwError } from 'rxjs';
 })
 export class PokemonService {
 
-  private _url:string = `https://pokeapi.co/api/v2/pokemon?limit=151`
+  private _url:string = `https://pokeapi.co/api/v2/pokemon?limi=151`
 
   constructor(private http: HttpClient) { }
 
   public listAllPokemon(){
-    return this.http.get<any>(this._url,).pipe(
+    return this.http.get<any>(this._url,)
+    .pipe(
       catchError((this.handleError))
     )
   }
