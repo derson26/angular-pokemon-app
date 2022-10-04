@@ -1,4 +1,10 @@
-.card
-{
-  border-bottom:none !important
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+
+}
+
+.mat-card-avatar{
+  margin-bottom: 10px;
 }

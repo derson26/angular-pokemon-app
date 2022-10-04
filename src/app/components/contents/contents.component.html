@@ -1,1 +1,23 @@
-<p>contents works!</p>
+
+<div *ngIf="pokemon$ | async as pokemonList; else loading" >
+<div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayout.xs="column">
+  <ng-container class="pokemon-section" *ngFor="let pokemon of pokemonList.results" >
+      <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" fxFlex.xl="20%" fxFlex.lg="25%">
+        <mat-card>
+          <mat-card-header fxLayout="row" fxLayoutAlign="center center">
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        </mat-card>
+      </div>
+
+  </ng-container>
+</div>
+
+</div>
+
+
+<ng-template #loading>loading</ng-template>
+
+

@@ -10,6 +10,7 @@ import { MaterialModule } from './modules/material/material.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TextTransformDirective } from './directives/text-transform.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { TextTransformDirective } from './directives/text-transform.directive';
     PageNotFoundComponent,
     TextTransformDirective,
   ],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule, FlexLayoutModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MaterialModule,
+    FlexLayoutModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

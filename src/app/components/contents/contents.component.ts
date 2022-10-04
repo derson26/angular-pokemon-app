@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, tap } from 'rxjs';
+import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
   selector: 'app-contents',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentsComponent implements OnInit {
 
-  constructor() { }
+  pokemon$?:Observable<any>;
+
+  constructor( private _service: PokemonService) {
+
+   }
 
   ngOnInit(): void {
+    this.pokemon$ = this._service.listAllPokemon();
+    // .subscribe({
+    //   next:(pokemon)=>{
+    //     console.log(pokemon.results)
+    //   }
+    // }
+    //)
   }
 
 }
