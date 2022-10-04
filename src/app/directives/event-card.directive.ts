@@ -9,12 +9,12 @@ export class EventCardDirective {
 
   @HostListener('mouseenter') mouseenter(){
     this.onMouseEnter = true;
-    this.transition
+    this.transition;
   }
 
   @HostListener('mouseleave') mouseleave(){
     this.onMouseEnter = false;
-    this.transition
+    this.transition;
   }
 
   @HostBinding('class.pokemon-card-mouse-enter') onMouseEnter:boolean = false;
