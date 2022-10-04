@@ -1,16 +1,16 @@
+<!-- List of pokemon -->
 <div *ngIf="pokemon$ | async as pokemonList; else loading">
 
   <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayout.xs="column">
-    <ng-container class="pokemon-section" *ngFor="let pokemon of pokemonList.results">
+    <ng-container class="pokemon-section" *ngFor="let pokemon of pokemonList.results; index as id">
       <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" fxFlex.xl="20%" fxFlex.lg="25%">
         <!-- Begin Pokemon Card -->
-        <mat-card>
+        <mat-card class="pokemon-card" D-Event-Card>
           <mat-card-header fxLayout="row" fxLayoutAlign="center center">
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
+            <div mat-card-avatar D-Change-Background-Image [index]="id" ></div>
+            <mat-card-title>{{ pokemon.name}}</mat-card-title>
           </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-            alt="Photo of a Shiba Inu">
+          <img mat-card-image D-Change-Src [index]="id" [alt]="pokemon.name">
         </mat-card>
         <!-- End Pokemon Card -->
       </div>

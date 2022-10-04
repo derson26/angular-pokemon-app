@@ -11,6 +11,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TextTransformDirective } from './directives/text-transform.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonImageDirective } from './directives/pokemon-image.directive';
+import { BackgroundImageDirective } from './directives/background-image.directive';
+import { EventCardDirective } from './directives/event-card.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
     ContentsComponent,
     PageNotFoundComponent,
     TextTransformDirective,
+    PokemonImageDirective,
+    BackgroundImageDirective,
+    EventCardDirective,
   ],
   imports: [
     BrowserModule,

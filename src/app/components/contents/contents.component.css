@@ -1,10 +1,4 @@
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-
-}
-
 .mat-card-avatar{
   margin-bottom: 10px;
 }
@@ -17,3 +11,16 @@
   -webkit-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
 }
+
+.pokemon-card{
+  box-shadow: 0px 0px 3px red;
+}
+
+.pokemon-card-mouse-enter{
+  box-shadow: 0px 0px 20px red;
+}
+
+.pokemon-card > .mat-card-header{
+  box-shadow: 0px 0px 1px red;
+}
+
