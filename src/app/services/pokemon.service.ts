@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, throwError } from 'rxjs';
+import { catchError, delay, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,8 @@ export class PokemonService {
   public listAllPokemon(){
     return this.http.get<any>(this._url,)
     .pipe(
-      catchError((this.handleError))
+      catchError((this.handleError)),
+      delay(3000),
     )
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, tap, catchError, of, Subject } from 'rxjs';
+import { Observable, catchError, of, Subject } from 'rxjs';
 import { PokemonService } from '../../services/pokemon.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -17,7 +17,14 @@ export class ContentsComponent implements OnInit {
   pokemon$?:Observable<any>;
   error$?:Subject<HttpErrorResponse> = new Subject<HttpErrorResponse>();
 
-  constructor( private _service: PokemonService) {
+  constructor( private _service: PokemonService) {}
+
+  ngOnInit(): void {
+    this.listAllPokemon()
+  }
+
+  // List All Pokemon
+  public listAllPokemon(): void{
     this.pokemon$ = this._service.listAllPokemon()
       .pipe(
         catchError((error)=>{
@@ -26,16 +33,6 @@ export class ContentsComponent implements OnInit {
           return of()
         })
       )
-   }
-
-  ngOnInit(): void {
-
-    // .subscribe({
-    //   next:(pokemon)=>{
-    //     console.log(pokemon.results)
-    //   }
-    // }
-    //)
   }
 
 }

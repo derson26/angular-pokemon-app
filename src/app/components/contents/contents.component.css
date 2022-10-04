@@ -8,3 +8,12 @@
 .mat-card-avatar{
   margin-bottom: 10px;
 }
+
+.spinner-error{
+  /*if your div is 200px, this will move it down by 200px, if it is 100px it will down by 100px etc */
+  position: absolute;
+  top:50%;
+  right: 50%;
+  /* -webkit-transform: translateY(50%, -50%); */
+  transform: translate(50%, -50%);
+}

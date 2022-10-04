@@ -1,29 +1,31 @@
+<div *ngIf="pokemon$ | async as pokemonList; else loading">
 
-<div *ngIf="pokemon$ | async as pokemonList; else loading" >
-
-<div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayout.xs="column">
-  <ng-container class="pokemon-section" *ngFor="let pokemon of pokemonList.results" >
+  <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayout.xs="column">
+    <ng-container class="pokemon-section" *ngFor="let pokemon of pokemonList.results">
       <div fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" fxFlex.xl="20%" fxFlex.lg="25%">
+        <!-- Begin Pokemon Card -->
         <mat-card>
           <mat-card-header fxLayout="row" fxLayoutAlign="center center">
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>Shiba Inu</mat-card-title>
           </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            alt="Photo of a Shiba Inu">
         </mat-card>
+        <!-- End Pokemon Card -->
       </div>
 
-  </ng-container>
-</div>
+    </ng-container>
+  </div>
 
 </div>
 
-
+<!-- Loading Template -->
 <ng-template #loading>
   <div *ngIf="error$ | async as error; else loadingError">
     <mat-card>
       <mat-card-header fxLayout="row" fxLayoutAlign="center">
-        <mat-card-title >Error Status: {{ error.status }}</mat-card-title>
+        <mat-card-title>Error Status: {{ error.status }}</mat-card-title>
       </mat-card-header>
       <mat-card-content style="text-align:center">
         {{ error.message }}
@@ -33,7 +35,7 @@
 </ng-template>
 
 <ng-template #loadingError>
-  loading
+  <div fxLayout="row" fxLayoutAlign="center center" class="spinner-error">
+    <mat-spinner></mat-spinner>
+  </div>
 </ng-template>
-
-
