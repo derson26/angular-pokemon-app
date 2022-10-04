@@ -26,9 +26,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-# Images
-
+# Desktop - Page Not Found Image
 ![Images!](/src/assets/Captura%20de%20ecr%C3%A3%202022-10-04%2C%20%C3%A0s%2017.40.02.png)
+
+# Desktop md => 'screen and (min-width: 960px) and (max-width: 1279px)'
 ![Images!](/src/assets/Captura%20de%20ecr%C3%A3%202022-10-04%2C%20%C3%A0s%2017.40.23.png)
+
+# Tablet / Mobile sm => 'screen and (min-width: 600px) and (max-width: 959px)'
 ![Images!](/src/assets/Captura%20de%20ecr%C3%A3%202022-10-04%2C%20%C3%A0s%2017.40.44.png)
+
+# Mobile xs => 'screen and (max-width: 599px)'
 ![Images!](/src/assets/Captura%20de%20ecr%C3%A3%202022-10-04%2C%20%C3%A0s%2017.40.58.png)
